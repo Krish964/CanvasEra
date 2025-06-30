@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link href="/output.css" rel="stylesheet">
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <div class="relative h-screen overflow-hidden">
+      <!-- Blurred Background Layer -->
+      <div class="absolute inset-0 bg-cover bg-center filter blur-sm scale-110 z-0"
+        style="background-image: url(/landingPageColorImg.jpg)">
+      </div>
+    
+      <!-- Overlay + Content -->
+      <div class="absolute inset-0 bg-black/30 text-white z-10">
+        <nav class="">
+          <h1 class="text-6xl md:text-7xl lg:text-8xl font-extrabold font-serif 
+          bg-gradient-to-r from-teal-400 via-cyan-300 to-green-400 
+                    bg-clip-text text-transparent 
+                    drop-shadow-lg text-center 
+                    tracking-wider 
+                    animate__animated animate__fadeInDown">
+            CanvasEra   </h1>
+
+        </nav>
+
+        <main class="flex flex-col justify-center items-center h-[70vh] gap-5">
+          <h1 class="text-6xl font-semibold">
+            Discover Art Explore Creativity
+          </h1>
+          <h2 class="w-180 font-serif py-5 text-xl">
+            Explore a new era of artistic expression with CanvasEra. Discover
+            the finest art exhibitions happening
+            
+              around you and connect with creativity like never before.
+            
+          </h2>
+          <button id="getStarted" class="getStarted px-8 py-3 rounded-2xl font-semibold tracking-wide 
+                           bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-400 
+                           text-white shadow-lg 
+                           hover:scale-105 hover:shadow-xl hover:brightness-110 
+                           transition-all duration-300 ease-in-out 
+                           animate__animated animate__fadeInUp cursor-pointer">
+            Get Started
+          </button>
+        
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

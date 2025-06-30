@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoginPage</title>
+  <link href="/output.css" rel="stylesheet" />
+  <script src="/script.js"></script>
+</head>
+
+<body class=" relative" style="background-image: url(/loginSignupFormbg.jpg);">
+  <main class="flex items-center justify-center flex-col h-screen bg-black/50 ">
+    <div class="Form text-white p-6 flex flex-col gap-3 items-center justify-center">
+
+      <!-- Canvasera Heading -->
+      <div class="h1">
+        <h1 class="text-7xl font-bold font-mono  bg-gradient-to-l from-teal-300 to-green-500 bg-clip-text text-transparent">
+          CanvasEra</h1>
+      </div>
+
+      <!-- Two buttons of login and signup -->
+      <div class="btn flex gap-4 items-center my-5">
+        <span class="flex gap-4 ">
+          <button id="loginBtn"
+            class="border-2 px-10 py-2 rounded-xl cursor-pointer bg-teal-300 text-black shadow-md hover:scale-105  hover:text-white transition-all duration-300 ease-in-out">Login
+          </button>
+
+            <button id="signupBtn"
+            class="border-2 px-10 py-2 rounded-xl cursor-pointer  text-white shadow-md hover:scale-105  hover:text-white transition-all duration-300 ease-in-out">Signup
+          </button>
+        </span>
+      </div>
+
+      <!-- Login form -->
+      <div id="loginForm"
+        class=" p-8 bg-[rgba(255,255,255,0.2)] rounded-xl  w-[25vw] h-[45vh] duration-300 hover:border-1 hover:scale-105 shadow-sm shadow-white block">
+        <form action="/login" method="post">
+          <div class="name flex flex-col gap-3 text-xl mb-5">
+            <label for="">Email</label>
+            <input class=" px-3 py-2 rounded-xl bg-white text-black  " type="email" name="email"
+              id="username" placeholder="Enter Email..">
+          </div>
+          <div class="password flex flex-col gap-3 text-xl mb-10">
+            <label for="">Password</label>
+            <input class="px-3 py-2 rounded-xl bg-white text-black  " type="password" name="password"
+              id="password" placeholder="Enter Password">
+          </div>
+
+          <div class="submit  bg-teal-300 px-4 py-2 text-center text-lg rounded-xl mb-3 cursor-pointer text-black ">
+            <input type="submit" name="" id="loginSubmit"></div>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- Signup form -->
+    <div id="signUpForm"
+      class=" p-8 bg-[rgba(255,255,255,0.3)] rounded-xl  w-[25vw] h-auto duration-300 hover:border-1 hover:scale-105 shadow-sm shadow-white hidden">
+
+      <!-- signup form -->
+      <form action="/signup" method="post">
+
+        <!-- Email Div -->
+        <div class="name flex flex-col gap-3 text-xl mb-5 text-white">
+          <label for="">Email</label>
+          <input class=" px-3 py-2 rounded-xl bg-white text-black cursor-pointer " type="email" name="email"
+            id="Username" placeholder="Enter Email..">
+        </div>
+
+        <!-- Password Div -->
+        <div class="password flex flex-col gap-3 text-xl mb-10 text-white">
+          <label for="">Password</label>
+          <input class="px-3 py-2 rounded-xl bg-white text-black  " type="password" name="signuppassword"
+            id="signupPassword"  placeholder="Enter Password" required>
+        </div>
+
+        <!-- Confirm password Div -->
+        <div class="password flex flex-col gap-3 text-xl mb-10 text-white">
+          <label for="">Confirm Password</label>
+          <input class="px-3 py-2 rounded-xl bg-white text-black  " type="password" name="cnfpassword"
+            id="cnfpassword" placeholder="Confirm Password" required>
+        </div>
+
+        <!-- Submit idv -->
+        <div class="submit  bg-teal-300 px-4 py-2 text-center text-lg rounded-xl mb-3 cursor-pointer text-black "><input
+            type="submit" name="" id="signupSubmit"></div>
+      </form>
+    </div>
+  </main>
+</body>
+
+</html>

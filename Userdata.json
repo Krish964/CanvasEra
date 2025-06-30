@@ -1,0 +1,17 @@
+[
+  {
+    "email": "user123@gmail.com",
+    "password": "krish231217",
+    "confirmpassword": "krish231217"
+  },
+  {
+    "email": "user326@gmail.com",
+    "password": "krishna",
+    "confirmpassword": "krishna"
+  },
+  {
+    "email": "krishkumarsingh192@gmail.com",
+    "password": "radheshyam",
+    "confirmpassword": "radheshyam"
+  }
+]
