@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const upcomingConatiner = document.getElementById("ongoingUl");
   const pastlist = document.querySelector("#pastListUl");
   const ongoinglist = document.querySelector("#currentUl")
+  console.log(ongoinglist);
 
   fetch("http://localhost:9000/exhibitions")
     .then((res) => res.json())
@@ -26,26 +27,35 @@ document.addEventListener("DOMContentLoaded", () => {
         
         data.forEach((item) => {
           const li = document.createElement("div");
-          li.className = "swiper-slide flex flex-col items-center justify-center  w-[23vw] h-[50vh] p-5 bg-amber-50 rounded-2xl shadow-xl transition-transform duration-300 hover:bg-white hover:scale-105 m-4";
+          li.className =
+            "swiper-slide flex flex-col items-center justify-between w-[23vw] h-[50vh] p-5 bg-gray-900 text-white rounded-2xl shadow-md hover:shadow-pink-500/20 transition-transform duration-300 hover:scale-105 m-4 border border-gray-700";
 
           li.innerHTML = `
-            <div class="img flex justify-center items-center">
-              <img class="w-[200px] h-[200px] object-fill rounded-2xl" src="${item.image}" alt="">
+            <div class="img flex justify-center items-center mb-2">
+              <img class="w-[200px] h-[200px] object-cover rounded-xl shadow-lg" src="${item.image}" alt="">
             </div>
-            <h1 class="font-semibold font-sans text-center">${item.title}</h1>
-           <div class ="text-center"> <h2 class="w-full text-center font-mono text-sm font-medium">${item.description}</h2>
-      </div>       <span class="flex gap-4 text-sm items-center justify-center">
-              <h2>${item.location}</h2>
-              <h2>${item.date}</h2>
+            
+            <h1 class="font-semibold font-sans text-lg text-center mb-1 hover:text-pink-400 transition duration-200">${item.title}</h1>
+        
+            <div class="text-center px-2 mb-1">
+              <h2 class="text-sm font-mono text-gray-300 line-clamp-2">${item.description}</h2>
+            </div>
+        
+            <span class="flex gap-3 text-sm text-gray-400 items-center justify-center mb-1">
+              <h2><i class="fa-solid fa-location-dot mr-1 text-pink-400"></i>${item.location}</h2>
+              <h2><i class="fa-regular fa-calendar-days mr-1 text-yellow-400"></i>${item.date}</h2>
             </span>
-  
-            <div class ="flex justify-center item-center mt-3">
-            <button class="mb-3 px-5 py-3 bg-teal-300 rounded-2xl font-sans text-sm cursor-pointer ">Know More</button>
+        
+            <div class="flex justify-center items-center mt-2">
+              <button class="px-5 py-2 bg-pink-600 hover:bg-pink-700 transition text-white rounded-2xl font-sans text-sm shadow hover:shadow-pink-500/40">
+                Know More
+              </button>
             </div>
           `;
-
+         
           cardContainer.appendChild(li);
         });
+        
   
       }
 
@@ -198,15 +208,15 @@ document.addEventListener("DOMContentLoaded", () => {
       data.forEach((t) => {
         const slide = document.createElement("div");
         slide.className =
-          "swiper-slide bg-white/80 rounded-3xl shadow-lg p-6 m-2 max-w-md mx-auto transition-transform duration-300 hover:scale-105 backdrop-blur-md";
+          "swiper-slide bg-gray-900/90 rounded-3xl shadow-lg p-6 m-2 max-w-md mx-auto transition-transform duration-300 hover:scale-105 backdrop-blur-md border border-gray-700";
 
         slide.innerHTML = `
-          <p class="text-gray-700 italic mb-4">"${t.quote}"</p>
-          <div class="flex items-center gap-4 mt-4">
-            <img src="${t.image}" class="w-14 h-14 rounded-full border-2 ${t.border}" />
+          <p class="text-gray-300 italic mb-4 text-center">"${t.quote}"</p>
+          <div class="flex items-center gap-4 mt-4 p-3 bg-gray-800 rounded-xl shadow-md hover:shadow-pink-500/20 transition duration-300">
+            <img src="${t.image}" class="w-14 h-14 rounded-full border-2 ${t.border} shadow-lg" />
             <div>
-              <h3 class="font-bold text-lg">${t.name}</h3>
-              <span class="text-sm text-gray-500">${t.role}</span>
+              <h3 class="font-bold text-white text-lg hover:text-pink-400 transition">${t.name}</h3>
+              <span class="text-sm text-gray-400">${t.role}</span>
             </div>
           </div>
         `;
